@@ -61,12 +61,28 @@ function filterdata(){
     else {
     tbody.html("");
     console.log(`${inputValue1}, ${inputValue2}, ${inputValue3}, ${inputValue4}, ${inputValue5}`);
+    let filteredData = tableData
     
+    if (inputValue1.length === 0) {console.log("no input for date");}
+    else { 
     filteredData = tableData.filter(tableData => tableData.datetime === inputValue1);
+    }
+    if (inputValue2.length === 0) {console.log("no input for city");}
+    else {
     filteredData = filteredData.filter(filteredData => filteredData.city === inputValue2);
+    }
+    if (inputValue3.length === 0) {console.log("no input for state");}
+    else {
     filteredData = filteredData.filter(filteredData => filteredData.state === inputValue3);
+    }
+    if (inputValue4.length === 0) {console.log("no input for country");}
+    else {
     filteredData = filteredData.filter(filteredData => filteredData.country === inputValue4);
+    }
+    if (inputValue5.length === 0) {console.log("no input for shape");}
+    else{
     filteredData = filteredData.filter(filteredData => filteredData.shape === inputValue5);
+    }
     console.log(filteredData);
     filteredData.forEach(({datetime, city, state, country, shape, durationMinutes, comments}) =>{
         let row = tbody.append("tr");
