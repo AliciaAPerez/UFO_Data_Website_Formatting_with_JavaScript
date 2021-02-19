@@ -9,7 +9,7 @@ UFO Data Website Formatting with JavaScript
 * [Overview](#overview)  
 
 ## General Info
-This code is make a webpage for the data set revolving around UFO sightings. The code used JavaScript and HTML to make the web page. 
+This code is make a webpage for the data set revolving around UFO sightings. The code used JavaScript and HTML with CSS and Bootstrap to make the web page. 
 
 ## Technologies
 Project is created with:  
