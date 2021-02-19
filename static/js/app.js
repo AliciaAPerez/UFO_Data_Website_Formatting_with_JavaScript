@@ -60,15 +60,15 @@ function filterdata(){
     })}
     else {
     tbody.html("");
-    console.log(inputValue);
+    console.log(`${inputValue1}, ${inputValue2}, ${inputValue3}, ${inputValue4}, ${inputValue5}`);
     
-    let filteredData1 = tableData.filter(tableData => tableData.datetime === inputValue1);
-    let filteredData2 = filteredData1.filter(filteredData1 => filteredData1.datetime === inputValue2);
-    let filteredData3 = filteredData2.filter(filteredData2 => filteredData2.datetime === inputValue3);
-    let filteredData4 = filteredData3.filter(filteredData3 => filteredData3.datetime === inputValue4);
-    let filteredData5 = filteredData4.filter(filteredData4 => filteredData4.datetime === inputValue5);
-    console.log(filteredData5);
-    filteredData5.forEach(({datetime, city, state, country, shape, durationMinutes, comments}) =>{
+    filteredData = tableData.filter(tableData => tableData.datetime === inputValue1);
+    filteredData = filteredData.filter(filteredData => filteredData.city === inputValue2);
+    filteredData = filteredData.filter(filteredData => filteredData.state === inputValue3);
+    filteredData = filteredData.filter(filteredData => filteredData.country === inputValue4);
+    filteredData = filteredData.filter(filteredData => filteredData.shape === inputValue5);
+    console.log(filteredData);
+    filteredData.forEach(({datetime, city, state, country, shape, durationMinutes, comments}) =>{
         let row = tbody.append("tr");
         row.append("td").text(datetime);
         row.append("td").text(city);
