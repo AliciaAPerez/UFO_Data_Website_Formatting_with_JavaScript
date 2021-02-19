@@ -3,9 +3,9 @@ var tableData = data;
 // console.log(tableData)
 
 let tbody = d3.select("tbody");
-let table = d3.select("#ufo-table");
+//let table = d3.select("#ufo-table");
 
-tableData.forEach(([datetime, city, state, country, shape, durationMinutes, comments]) =>{
+tableData.forEach(({datetime, city, state, country, shape, durationMinutes, comments}) =>{
     let row = tbody.append("tr");
     row.append("td").text(datetime);
     row.append("td").text(city);
